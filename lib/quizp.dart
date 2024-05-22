@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'finalp.dart';
 
 class QuizPage extends StatefulWidget{
-  @override
-  _QuizPageState createState() => _QuizPageState();
+ const QuizPage({super.key});
+ @override
+  createState() => _QuizPageState();
 }
 
-class _QuizPageState extends State<QuizPage> {
+class _QuizPageState extends State <QuizPage> {
   int _perguntaAtual = 0;
   int _pontuacao = 0;
 
@@ -51,16 +52,16 @@ class _QuizPageState extends State<QuizPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Quiz')),
+      appBar: AppBar(title:const Text('Quiz')),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
               _perguntas[_perguntaAtual].pergunta,
-              style: TextStyle(fontSize: 20),
+              style: const TextStyle(fontSize: 20),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ...(_perguntas[_perguntaAtual].respostas).map((resposta) {
               return ElevatedButton(
                 onPressed: () {

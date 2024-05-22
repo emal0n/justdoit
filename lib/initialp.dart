@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'quizp.dart';
 
 class InitialPage extends StatelessWidget {
+ const InitialPage ({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Jogo do Quiz: Projeto-01'),
+        title: const Text('Jogo do Quiz: Projeto-01'),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -24,10 +25,10 @@ class InitialPage extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => QuizPage()),
+                MaterialPageRoute(builder: (context) => const QuizPage()),
               );
             },
-            child: Text('Inicial'),
+            child: const Text('Inicial'),
           ),
         ],
       ),

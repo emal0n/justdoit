@@ -9,7 +9,7 @@ class Justdoit extends StatelessWidget {
   const Justdoit({super.key});
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: InitialPage(),
       debugShowCheckedModeBanner: false,
     );
