@@ -13,19 +13,20 @@ class _QuizPageState extends State <QuizPage> {
 
   final List<Pergunta> _perguntas = [
     Pergunta(
-      pergunta: 'Qual é a capital da França?',
-      respostas: ['Paris', 'Roma', 'Londres', 'Berlim'],
-      respostaCorreta: 'Paris',
+      
+      pergunta: 'ONDE A NIKE FOI FUNDADA? 1/3',
+      respostas: ['ESTADOS UNIDOS', 'PORTUGAL', 'BRAZIL', 'CHINA'],
+      respostaCorreta: 'ESTADOS UNIDOS',
     ),
     Pergunta(
-      pergunta: 'Qual é o maior planeta do sistema solar?',
-      respostas: ['Júpiter', 'Netuno', 'Saturno', 'Terra'],
-      respostaCorreta: 'Júpiter',
+      pergunta: 'EM QUE DIA A NIKE FOI FUNDADA? 2/3',
+      respostas: ['25', '10', '27', '18'],
+      respostaCorreta: '25',
     ),
     Pergunta(
-      pergunta: 'Quem pintou a Mona Lisa?',
-      respostas: ['Van Gogh', 'Michelangelo', 'Leonardo da Vinci', 'Picasso'],
-      respostaCorreta: 'Leonardo da Vinci',
+      pergunta: 'EM QUAL ANO A NIKE FOI FUNDADA? 3/3',
+      respostas: ['2000', '1964', '1850', '2024'],
+      respostaCorreta: '1964',
     ),
   ];
 
@@ -52,22 +53,42 @@ class _QuizPageState extends State <QuizPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title:const Text('Quiz')),
+      backgroundColor: Colors.black,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Padding( 
+              padding: const EdgeInsets.all(25.0),
+              child: Image.asset(
+              'lib/images/nike2.jpg',
+              height: 240,
+            ),
+            ),
+
+            const SizedBox(height: 48),
+
             Text(
               _perguntas[_perguntaAtual].pergunta,
-              style: const TextStyle(fontSize: 20),
+              style: const TextStyle(
+                fontWeight: FontWeight.w900,
+                color: Colors.white,
+                fontSize: 15),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 30),
             ...(_perguntas[_perguntaAtual].respostas).map((resposta) {
-              return ElevatedButton(
+              return ElevatedButton( 
                 onPressed: () {
                   _responderPergunta(resposta);
                 },
-                child: Text(resposta),
+                child: Text(
+                  resposta,
+                  style: const TextStyle (
+                    fontSize: 12,
+                    fontWeight: FontWeight.w900,
+                    color: Colors.black
+                  )
+                  ),
               );
             }).toList(),
           ],
