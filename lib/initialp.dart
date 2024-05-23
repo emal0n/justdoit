@@ -7,7 +7,7 @@ class InitialPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    backgroundColor: Colors.yellow,
+    backgroundColor: Colors.black,
       body: Center(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal:25.0),
@@ -24,10 +24,11 @@ class InitialPage extends StatelessWidget {
           const SizedBox(height: 48),
 // Main t
           const Text(
-          'Just Do It',
+          'JUST DO IT',
            style: TextStyle(
-            fontWeight:FontWeight.bold ,
-            fontSize: 20,
+            fontWeight:FontWeight.w900,
+            color: Colors.white,
+            fontSize: 40,
            ),
         ),
         
@@ -36,7 +37,8 @@ class InitialPage extends StatelessWidget {
           const Text(
           'Fan quiz nike app by emalon91',
           style: TextStyle(
-            fontSize: 16,
+            fontWeight: FontWeight.w900,
+            fontSize: 10,
             color: Colors.grey,
            ),
           textAlign: TextAlign.center,
@@ -44,17 +46,17 @@ class InitialPage extends StatelessWidget {
 
           const SizedBox(height: 24),
 //
-          GestureDetector (
+            GestureDetector (
             onTap: () => Navigator.push(
               context,
               MaterialPageRoute(
                 builder: (context) => const QuizPage(),
                 ),
               ),
-            ),
-            Container(
+            
+           child:  Container(
               decoration: BoxDecoration (
-                color: Colors.black,
+                color: Colors.white,
                 borderRadius: BorderRadius.circular(12),
               ),
               padding: const EdgeInsets.all(25),
@@ -62,13 +64,14 @@ class InitialPage extends StatelessWidget {
                 child: Text(
                   'Start Now',
                   style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.black,
                     fontWeight: FontWeight.bold,
                     fontSize:16,
                   ),
                 ),
               )
             )
+            ),
           ],
         ),
       ),
