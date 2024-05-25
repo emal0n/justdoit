@@ -35,7 +35,7 @@ class InitialPage extends StatelessWidget {
           const SizedBox(height: 24),
 //sub t
           const Text(
-          'Fan quiz nike app by emalon91',
+          'BasicQuizApp Nike by emal0n',
           style: TextStyle(
             fontWeight: FontWeight.w900,
             fontSize: 10,

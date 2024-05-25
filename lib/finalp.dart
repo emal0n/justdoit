@@ -38,7 +38,7 @@ class _FinalPageState extends State <FinalPage> {
           ),
             const SizedBox(height: 48),
 
-            const Text( 'FINISH',
+            const Text( 'Finish',
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 40,
@@ -48,7 +48,7 @@ class _FinalPageState extends State <FinalPage> {
             ),
 
           const Text(
-          'copyright emalon91@github',
+          'copyright emal0n@github',
           style: TextStyle(
             fontWeight: FontWeight.w900,
             fontSize: 10,
@@ -86,7 +86,7 @@ class _FinalPageState extends State <FinalPage> {
               padding: const EdgeInsets.all(25),
               child: const Center(
                 child: Text(
-                  'RESTART',
+                  'Restart',
                   style: TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.w900,
