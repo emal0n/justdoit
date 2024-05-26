@@ -24,6 +24,13 @@ class _FinalPageState extends State <FinalPage> {
   @override
   
   Widget build(BuildContext context) {
+    String mensagem;
+
+    if (_pontuacao >= (_totalPerguntas)) {
+      mensagem = 'Você é um verdadeiro fã nike';
+    } else {
+      mensagem = 'Temos um impostor';
+    }
     return Scaffold(
       backgroundColor: Colors.black,
       body: Column(
@@ -68,8 +75,20 @@ class _FinalPageState extends State <FinalPage> {
               textAlign: TextAlign.center,
             ),
 
-            const SizedBox(height: 24),
-
+            const SizedBox(height: 10),
+          
+            Text(
+            mensagem,
+            style: const TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.w900,
+              fontSize: 15,
+            ),
+            textAlign: TextAlign.center,
+          ),
+            
+          const SizedBox(height: 24),
+            
             GestureDetector (
             onTap: () => Navigator.push(
               context,
