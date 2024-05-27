@@ -10,7 +10,6 @@ class QuizPage extends StatefulWidget {
 class _QuizPageState extends State<QuizPage> {
   int _perguntaAtual = 0;
   int _pontuacao = 0;
-  int _totalPerguntas = 3;
 
   final List<Pergunta> _perguntas = [
     Pergunta(
@@ -61,7 +60,7 @@ class _QuizPageState extends State<QuizPage> {
             Padding(
               padding: const EdgeInsets.all(25.0),
               child: Image.asset(
-                'lib/images/nike2.jpg',
+                'lib/images/nk2.gif',
                 height: 240,
               ),
             ),
@@ -70,20 +69,10 @@ class _QuizPageState extends State<QuizPage> {
               _perguntas[_perguntaAtual].pergunta,
               style: const TextStyle(
                   fontWeight: FontWeight.w900,
-                  color: Colors.white,
+                  color: Colors.redAccent,
                   fontSize: 15),
             ),
-            const SizedBox(height: 10),
-            Text(
-              "Pergunta: $_perguntaAtual de $_totalPerguntas",
-              style: const TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.w900,
-                fontSize: 15,
-              ),
-              textAlign: TextAlign.center,
-            ),
-            const SizedBox(height: 30),
+            const SizedBox(height: 25),
             ...(_perguntas[_perguntaAtual].respostas).map((resposta) {
               return ElevatedButton(
                 onPressed: () {
@@ -96,6 +85,24 @@ class _QuizPageState extends State<QuizPage> {
                         color: Colors.black)),
               );
             }),
+            const SizedBox(height: 25),
+            const Text(
+              'JUST DO IT',
+              style: TextStyle(
+                fontWeight: FontWeight.w900,
+                color: Colors.redAccent,
+                fontSize: 17,
+              ),
+            ),
+            Text(
+              "$_perguntaAtual - 3",
+              style: const TextStyle(
+                fontWeight: FontWeight.w900,
+                fontSize: 15,
+                color: Colors.grey,
+              ),
+              textAlign: TextAlign.center,
+            ),
           ],
         ),
       ),
