@@ -61,8 +61,10 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets: 
-    - lib/images/nike.png
-    - lib/images/nike2.jpg
+    - lib/images/nikee.png
+    - lib/images/nk2.gif
+    - lib/images/nk3.gif
+    - lib/images/nk.gif
     
 
   # An image asset can refer to one or more resolution-specific "variants", see
